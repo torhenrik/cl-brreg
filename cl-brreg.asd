@@ -4,6 +4,7 @@
   :license "MIT"
   :depends-on (#:cl-ppcre
                #:drakma
+               #:yason
                )
   :serial t
   :components ((:file "src/package")
