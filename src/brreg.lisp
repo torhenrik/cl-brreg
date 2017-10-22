@@ -17,12 +17,12 @@
   (get-orgfeature "navn" orgnummer))
 
 (defun get-org-address (orgnummer)
-  (gethash "adresse" (get-orgfeature "postadresse" orgnummer)))
+  (gethash "adresse" (get-orgfeature "forretningsadresse" orgnummer)))
 
 (defun get-org-postnummer (orgnummer)
-  (gethash "postnummer" (get-orgfeature "postadresse" orgnummer)))
+  (gethash "postnummer" (get-orgfeature "forretningsadresse" orgnummer)))
 
 (defun get-org-poststed (orgnummer)
-  (gethash "poststed" (get-orgfeature "postadresse" orgnummer)))
+  (gethash "poststed" (get-orgfeature "forretningsadresse" orgnummer)))
 
 
