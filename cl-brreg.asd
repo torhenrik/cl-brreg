@@ -1,4 +1,4 @@
-(asdf:defsystem #:brreg
+(asdf:defsystem #:cl-brreg
   :description "A simple Common Lisp interface to the Brønnøysund register of norwegian Corporations."
   :author "Tor Henrik Hanken <torhenrik@gmail.com>"
   :license "MIT"
