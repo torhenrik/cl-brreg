@@ -21,7 +21,9 @@
          (make-hash-table)))))
 
 (defun get-org-name (orgnummer)
-  (get-orgfeature "navn" orgnummer))
+  (let ((navn (get-orgfeature "navn" orgnummer)))
+    (when (stringp navn)
+      navn)))
 
 (defun get-org-address (orgnummer)
   (gethash "adresse" (get-orgfeature "forretningsadresse" orgnummer)))
