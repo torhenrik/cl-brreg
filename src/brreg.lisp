@@ -15,16 +15,11 @@
 
 (defun get-orgfeature (feature orgnummer)
   (ignore-errors
-   (let ((hash (get-jsonhash orgnummer)))
-     (if hash
-         (gethash feature hash)
-         (make-hash-table)))))
+   (gethash feature (get-jsonhash orgnummer))))
 
 (defun get-org-name (orgnummer)
-  (let ((navn (get-orgfeature "navn" orgnummer)))
-    (when (stringp navn)
-      navn)))
-
+  (get-orgfeature "navn" orgnummer))
+  
 (defun get-org-address (orgnummer)
   (ignore-errors
    (gethash "adresse" (get-orgfeature "forretningsadresse" orgnummer))))
