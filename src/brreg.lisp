@@ -26,11 +26,14 @@
       navn)))
 
 (defun get-org-address (orgnummer)
-  (gethash "adresse" (get-orgfeature "forretningsadresse" orgnummer)))
+  (ignore-errors
+   (gethash "adresse" (get-orgfeature "forretningsadresse" orgnummer))))
 
 (defun get-org-postnummer (orgnummer)
-  (gethash "postnummer" (get-orgfeature "forretningsadresse" orgnummer)))
+  (ignore-errors
+   (gethash "postnummer" (get-orgfeature "forretningsadresse" orgnummer))))
 
 (defun get-org-poststed (orgnummer)
-  (gethash "poststed" (get-orgfeature "forretningsadresse" orgnummer)))
+  (ignore-errors
+   (gethash "poststed" (get-orgfeature "forretningsadresse" orgnummer))))
 
